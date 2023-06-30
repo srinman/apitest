@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/70893359-47d6-423e-968e-cf1ab6cea686/resourceGroups/airg/providers/Microsoft.Web/sites/srinmanapitest",
+    "appService.deploySubpath": "."
+}
