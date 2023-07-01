@@ -10,7 +10,7 @@ def home():
     response = {'message': 'Hello World'}
     return jsonify(response)
 #Implement POST method
-@app.route('/addkey', methods=['POST'])
+@app.route('/keys', methods=['POST'])
 def add_data():
     message = request.get_json()
     print(message)
