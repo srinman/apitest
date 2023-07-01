@@ -1,6 +1,8 @@
+import json
 from flask import Flask, request, jsonify, render_template, url_for
 #from flask_cors import CORS 
 
+datadict = {}
 app = Flask(__name__)
 
 #Implement default GET method 
@@ -9,6 +11,16 @@ def home():
     #return render_template('index.html')
     response = {'message': 'Hello World'}
     return jsonify(response)
+#Implement default GET method for a specific route - listing all keys
+@app.route('/keys', methods=['GET'])
+def get_keys():
+    keys_list = list(datadict.keys())
+    return json.dumps(keys_list)
+#Implement GET method for a specific route - listing all values
+@app.route('/values', methods=['GET'])
+def get_values():
+    values_list = list(datadict.values())
+    return json.dumps(values_list)
 #Implement POST method
 @app.route('/keys', methods=['POST'])
 def add_data():
@@ -16,7 +28,7 @@ def add_data():
     print(message)
     key = message['key']
     value = message['value']
-    #data[key] = value
+    datadict[key] = value
     return jsonify({'message': f'{key} added/updated with value {value}'})
 
 if __name__ == '__main__':
