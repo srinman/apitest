@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def home():
     #return render_template('index.html')
-    response = {'message': 'Hello World Test'}
+    response = {'message': 'Hello World Test!'}
     return jsonify(response)
 #      curl -X GET 'localhost:5000/'
 
