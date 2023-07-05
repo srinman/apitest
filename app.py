@@ -116,12 +116,3 @@ if __name__ == '__main__':
     app.run()
 
 
-# Sample calls
-# - to test this app with curl use the following command
-#      curl https://srinmanapitest.azurewebsites.net/
-# - to test this app as a backend API with APIM, provided /apitest is the name of the API
-#      curl -X GET 'https://srinmanapimpub.azure-api.net/apitest' -H 'Host: srinmanapimpub.azure-api.net' -H "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key: 2a4482..."
-#            API URL suffix is apitest           
-#             Base URL is https://srinmanapimpub.azure-api.net/apitest
-#            call is routed to /apitest and web service URl is set to https://srinmanapitest.azurewebsites.net/  but APIM protects the web service URL with a subscription key so that only authorized users can access it
-#      curl -X POST 'localhost:5000/addkey' -H "Content-Type: application/json" --data '{"key": "key1","value":"val1"}' 
