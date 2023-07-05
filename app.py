@@ -6,7 +6,7 @@ datadict = {}
 app = Flask(__name__)
 
 #Implement default GET method 
-@app.route('/', methods=['GET'])
+@app.route('/test', methods=['GET'])
 def home():
     #return render_template('index.html')
     response = {'message': 'Hello World Test!'}
